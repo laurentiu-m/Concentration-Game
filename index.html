@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concentration Game</title>
+    <!-- Icon for the TAB -->
+    <link rel="icon" type="image/x-icon" href="images/memory.png" />
+    <!-- Link for Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Links for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link for style.css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Script for FontAwesome icons -->
+    <script
+      src="https://kit.fontawesome.com/2c385d2219.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header  -->
+    <section class="header" id="header">
+      <!-- Navigation Bar -->
+      <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-style">
+        <div class="container-fluid overflow-hidden">
+          <a class="navbar-brand">CONCENTRATION GAME</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" aria-current="page" href="#header">HOME</a>
+              <a class="nav-link nav-game" href="#game-section">GAME</a>
+              <a class="nav-link" href="#instruction">INSTRUCTION</a>
+              <a class="nav-link" href="#about">ABOUT ME</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Welcome Page -->
+      <div class="welcome-page container-fluid text-center">
+        <h1 class="welcome-heading">WELCOME,</h1>
+        <h2 class="welcome-description">
+          to the exciting
+          <span class="welcome-game-name">CONCENTRATION GAME </span> that will
+          challenge your brain and test your skills!
+        </h2>
+        <a href="#game-section" type="button" class="btn welcome-btn">PLAY</a>
+      </div>
+    </section>
+    <!-- Game Section  -->
+    <section id="game-section" class="game-page">
+      <div class="game-starting-page container-fluid text-center">
+        <h1 id="game-heading" class="game-heading">CONCENTRATION GAME</h1>
+        <button id="start-game" type="button" class="btn game-button-start">
+          START THE GAME
+        </button>
+      </div>
+      <div
+        id="main-game"
+        class="container game-hide text-center game-container"
+      >
+        <div class="row">
+          <div class="col-6 time-container">
+            Time: <span id="timer" class="timer-style"></span>
+          </div>
+          <div class="col-6 moves-container">
+            Moves: <span id="click-count" class="moves-style"></span>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+          <div class="col-3">
+            <div class="card-back"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Winning Screen -->
+      <div id="win-row-container-hide" class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <div id="win-container" class="win-box win-hide">
+            <h1 class="win-heading">CONGRATULATIONS, YOU WON!</h1>
+            <div class="row win-row">
+              <div class="col-6 win-time">
+                Time: <span id="win-time"></span>
+              </div>
+              <div class="col-6 win-moves">
+                Moves: <span id="win-move"></span>
+              </div>
+            </div>
+            <button id="play-again" class="btn win-button">PLAY AGAIN</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Instruction Screen -->
+    <section id="instruction" class="instruction-style">
+      <div class="instruction-container">
+        <h1>INSTRUCTION</h1>
+        <p>The game starts with all the cards face down</p>
+        <hr />
+        <p>Flip over two cards at a time, trying to find a match</p>
+        <hr />
+        <p>
+          If you find a match, the cards will be kept on the screen and take
+          another turn
+        </p>
+        <hr />
+        <p>
+          If the cards don't match, they will be flipped over and take another
+          turn
+        </p>
+        <hr />
+        <p>The game continues until all the matches have been found</p>
+      </div>
+    </section>
+    <!-- About Me Section -->
+    <section id="about" class="about-style">
+      <div class="container">
+        <h1 class="about-heading">ABOUT ME</h1>
+      </div>
+      <div class="about-container container-fluid text-center">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+            <img
+              class="about-profile-picture mx-auto"
+              src="images/cat-profile.jpg"
+              alt="Profile Picture"
+            />
+          </div>
+          <div class="col-lg-6 col-md-12 about-description">
+            <p>
+              Hi, my name is Laurentiu, and I'm a beginner front-end developer
+              with a passion for creating beautiful websites.
+            </p>
+            <p>
+              I decided to create a memory game that would not only be fun to
+              play, but also help players improve their memory skills. The game
+              is designed to challenge players of all ages, from children to
+              adults. It will test your memory skills and help you improve your
+              ability to remember information.
+            </p>
+            <p>
+              I hope that you'll enjoy playing my memory game as much as I
+              enjoyed creating it. If you have any feedback or suggestions,
+              please don't hesitate to let me know. I'm always looking for ways
+              to improve my games and make them more fun and engaging for
+              players.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer-style">
+      <div class="container">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <p>© 2023 Concentration Game</p>
+      </div>
+    </footer>
+    <!-- Bootstrap script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- javaScript -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
