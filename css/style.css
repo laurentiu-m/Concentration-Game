@@ -210,13 +210,13 @@ body {
   transition: ease-out 0.2s;
 }
 
-.card-back:hover {
+/* .card-back:hover {
   transform: scale(1.03);
 }
 
 .card-back:active {
   transform: scale(1);
-}
+} */
 
 .card-content {
   max-width: 60%;
